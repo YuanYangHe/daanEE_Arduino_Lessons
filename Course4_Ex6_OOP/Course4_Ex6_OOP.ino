@@ -89,12 +89,15 @@ void setup(){
 }
 void loop() {
   // put your main code here, to run repeatedly:
-  static Button button1(pinButton);  
-  static LED led1(pinLed1);
-  static LED led2(pinLed2);
-  
+   
+  static LED led1(pinLed1);  
   led1.blinkLed();
-  static int state = 0;
+  led2();
+}
+void led2(){
+  static Button button1(pinButton); 
+  static LED led2(pinLed2);
+  static int state = 0;  
   switch(state){
     case 0: //waiting for first pressed
       led2.off();
@@ -102,23 +105,11 @@ void loop() {
       break;
     case 1: // waiting for first released
       led2.on();
-      if(button1.falling()) state++;
+      if(button1.rising()) state++;
       break;
     case 2: // waiting for second pressed
-      led2.on();
-      if(button1.rising()) state++;
-      break;
-    case 3:
       led2.blinkLed();
-      if(button1.falling()) state++;
-      break;
-    case 4:
-      led2.blinkLed();      
-      if(button1.rising()) state++;
-      break;
-    case 5:
-      led2.off();
-      if(button1.falling()) state = 0;
-      break;  
-  }
+      if(button1.rising()) state = 0;
+      break;    
+  }  
 }
