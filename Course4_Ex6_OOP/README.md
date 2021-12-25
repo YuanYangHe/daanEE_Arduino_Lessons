@@ -43,7 +43,7 @@ class LED{
  - Use the LED object rewrite 練習1
 
 
-### 練習7: Please write a class name "Button" with following public functions:
+### 練習 7: Please write a class name "Button" with following public functions:
   - Debounce about **20ms** either **pressing** or **releasing**
   - Function **"pressed()"** returning in **"bool"** type
     - When button is pressed return **true** else **false**
