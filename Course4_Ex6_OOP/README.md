@@ -39,7 +39,7 @@ class LED{
   - `Led1.on();` //member function 呼叫 
 
 ### 練習 6: 用物件導向寫法修改練習1
- - Please complete the class "LED"  above
+ - Please complete the class "LED" above
  - Use the LED object rewrite 練習1
 
 
@@ -55,3 +55,8 @@ class LED{
   - Notice that do not use any **delay()** when debouncing!!
   - 保持 **練習2** 的所有功能並使用 **class "Button"**。
   - 加入一個 **LED3** 並搭配 **button2** => 當按下 **button2** 則 **LED3** 亮。
+
+### Reference
+ - [Arduino Object Oriented Programming (OOP)](https://roboticsbackend.com/arduino-object-oriented-programming-oop/)
+ - [Writing a Library for Arduino](https://www.arduino.cc/en/Hacking/libraryTutorial)
+
